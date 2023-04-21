@@ -1,6 +1,7 @@
 package clases;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class Pokemon {
@@ -14,13 +15,24 @@ public class Pokemon {
     private float velocidad;
     private int estamina;
     private int nivel;
-    private ArrayList<String> movimientos;
+    private List<String> movimientos = new ArrayList<>();
     private int fertilidad;
-    private String sexo;
-    private ArrayList<String> tipo;
-    private ArrayList<String> estado;
+    private char sexo;
     private Objetos objeto;
+    private Estado estado;
 
+    Pokemon pikachu = new Pokemon("Pikachu","pika",'H');
+
+    public void setEstado(Estado estado) {
+        this.estado = estado;
+    }
+
+    public void aplicarEstado(Pokemon p) {
+        p.setEstado(Estado.DORMIDO);
+    }
+
+    public void hola(){
+        }
 
     private int getRandomVida(){
         Random r=new Random();
@@ -30,17 +42,13 @@ public class Pokemon {
         Random r2 = new Random();
         return r2.nextInt(20)+1;
     }
-    public Pokemon(String nombre, String mote, String sexo, ArrayList<String> tipo, ArrayList<String> estado){
+    public Pokemon(String nombre, String mote, char sexo){
     this.nombre=nombre;
     this.mote=mote;
     this.sexo=sexo;
-    this.tipo=new ArrayList<String>();
-    this.estado=estado(0);
-    this.objeto=null;
     this.estamina=100;
-
-
-
+    this.nivel=1;
+    this.fertilidad=5;
     }
 
-}
+    }
