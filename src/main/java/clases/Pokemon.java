@@ -1,8 +1,6 @@
 package clases;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class Pokemon {
     private String nombre;
@@ -28,7 +26,7 @@ public class Pokemon {
     }
 
     public void aplicarEstado(Pokemon p) {
-        p.setEstado(Estado.DORMIDO);
+        p.setEstado(Estado.NORMAL);
     }
 
     public void hola(){
@@ -36,7 +34,7 @@ public class Pokemon {
 
     private int getRandomVida(){
         Random r=new Random();
-        return r.nextInt(10)+1;
+        return r.nextInt(50)+1;
     }
     private int getRandomAtaque(){
         Random r2 = new Random();
@@ -49,6 +47,36 @@ public class Pokemon {
     this.estamina=100;
     this.nivel=1;
     this.fertilidad=5;
+    this.vitalidad=getRandomVida();
+    this.ataque=getRandomAtaque();
     }
+
+        private Tipo tipo1;
+        private Tipo tipo2;
+        public static HashMap<Tipo, List<Tipo>> tablaTipos;{
+
+        if(tablaTipos == null){
+            tablaTipos = new HashMap<>();
+            tablaTipos.put(Tipo.ACERO, new LinkedList<>());
+            tablaTipos.put(Tipo.AGUA, new LinkedList<>());
+            tablaTipos.put(Tipo.BICHO, new LinkedList<>());
+            tablaTipos.put(Tipo.DRAGON, new LinkedList<>());
+            tablaTipos.put(Tipo.ELECTRICO, new LinkedList<>());
+            tablaTipos.put(Tipo.FANTASMA, new LinkedList<>());
+            tablaTipos.put(Tipo.BICHO, new LinkedList<>());
+            tablaTipos.put(Tipo.FUEGO, new LinkedList<>());
+            tablaTipos.put(Tipo.HADA, new LinkedList<>());
+            tablaTipos.put(Tipo.HIELO, new LinkedList<>());
+            tablaTipos.put(Tipo.LUCHA, new LinkedList<>());
+            tablaTipos.put(Tipo.NORMAL, new LinkedList<>());
+            tablaTipos.put(Tipo.PLANTA, new LinkedList<>());
+
+
+        }
+
+
+    }
+
+
 
     }
