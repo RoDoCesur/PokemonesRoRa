@@ -53,29 +53,88 @@ public class Pokemon {
 
         private Tipo tipo1;
         private Tipo tipo2;
-        public static HashMap<Tipo, List<Tipo>> tablaTipos;{
+           private HashMap<Tipo, List<Tipo>> tablaDebiles;
+           private HashMap<Tipo, List<Tipo>> tablaFuertes;
 
-        if(tablaTipos == null){
-            tablaTipos = new HashMap<>();
-            tablaTipos.put(Tipo.ACERO, new LinkedList<>());
-            tablaTipos.put(Tipo.AGUA, new LinkedList<>());
-            tablaTipos.put(Tipo.BICHO, new LinkedList<>());
-            tablaTipos.put(Tipo.DRAGON, new LinkedList<>());
-            tablaTipos.put(Tipo.ELECTRICO, new LinkedList<>());
-            tablaTipos.put(Tipo.FANTASMA, new LinkedList<>());
-            tablaTipos.put(Tipo.BICHO, new LinkedList<>());
-            tablaTipos.put(Tipo.FUEGO, new LinkedList<>());
-            tablaTipos.put(Tipo.HADA, new LinkedList<>());
-            tablaTipos.put(Tipo.HIELO, new LinkedList<>());
-            tablaTipos.put(Tipo.LUCHA, new LinkedList<>());
-            tablaTipos.put(Tipo.NORMAL, new LinkedList<>());
-            tablaTipos.put(Tipo.PLANTA, new LinkedList<>());
-            tablaTipos.put(Tipo.PSIQUICO, new LinkedList<>());
-            tablaTipos.put(Tipo.ROCA, new LinkedList<>());
-            tablaTipos.put(Tipo.SINIESTRO, new LinkedList<>());
-            tablaTipos.put(Tipo.TIERRA, new LinkedList<>());
-            tablaTipos.put(Tipo.VENENO, new LinkedList<>());
-        }
+         private HashMap<Tipo, List<Tipo>> getTablaFuertes;{
+
+             if(tablaFuertes == null){
+            tablaFuertes = new HashMap<>();
+            tablaFuertes.put(Tipo.ACERO, new LinkedList<>());
+            tablaFuertes.put(Tipo.AGUA, new LinkedList<>());
+            tablaFuertes.put(Tipo.BICHO, new LinkedList<>());
+            tablaFuertes.put(Tipo.DRAGON, new LinkedList<>());
+            tablaFuertes.put(Tipo.ELECTRICO, new LinkedList<>());
+            tablaFuertes.put(Tipo.FANTASMA, new LinkedList<>());
+            tablaFuertes.put(Tipo.FUEGO, new LinkedList<>());
+            tablaFuertes.put(Tipo.HADA, new LinkedList<>());
+            tablaFuertes.put(Tipo.HIELO, new LinkedList<>());
+            tablaFuertes.put(Tipo.LUCHA, new LinkedList<>());
+            tablaFuertes.put(Tipo.NORMAL, new LinkedList<>());
+            tablaFuertes.put(Tipo.PLANTA, new LinkedList<>());
+            tablaFuertes.put(Tipo.PSIQUICO, new LinkedList<>());
+            tablaFuertes.put(Tipo.ROCA, new LinkedList<>());
+            tablaFuertes.put(Tipo.SINIESTRO, new LinkedList<>());
+            tablaFuertes.put(Tipo.TIERRA, new LinkedList<>());
+            tablaFuertes.put(Tipo.VENENO, new LinkedList<>());
+            tablaFuertes.put(Tipo.VOLADOR, new LinkedList<>());
+
+
+                 tablaFuertes.get(Tipo.ACERO).add(Tipo.HADA);
+            tablaFuertes.get(Tipo.ACERO).add(Tipo.HIELO);
+            tablaFuertes.get(Tipo.ACERO).add(Tipo.ROCA);
+            tablaFuertes.get(Tipo.AGUA).add(Tipo.FUEGO);
+                 tablaFuertes.get(Tipo.AGUA).add(Tipo.ROCA);
+                 tablaFuertes.get(Tipo.AGUA).add(Tipo.TIERRA);
+                 tablaFuertes.get(Tipo.AGUA).add(Tipo.FUEGO);
+                 tablaFuertes.get(Tipo.BICHO).add(Tipo.PLANTA);
+                 tablaFuertes.get(Tipo.BICHO).add(Tipo.PSIQUICO);
+                 tablaFuertes.get(Tipo.BICHO).add(Tipo.SINIESTRO);
+                 tablaFuertes.get(Tipo.DRAGON).add(Tipo.DRAGON);
+                 tablaFuertes.get(Tipo.ELECTRICO).add(Tipo.AGUA);
+                 tablaFuertes.get(Tipo.ELECTRICO).add(Tipo.VOLADOR);
+                 tablaFuertes.get(Tipo.FANTASMA).add(Tipo.PSIQUICO);
+                 tablaFuertes.get(Tipo.FANTASMA).add(Tipo.FANTASMA);
+                 tablaFuertes.get(Tipo.FUEGO).add(Tipo.ACERO);
+                 tablaFuertes.get(Tipo.FUEGO).add(Tipo.BICHO);
+                 tablaFuertes.get(Tipo.FUEGO).add(Tipo.HIELO);
+                 tablaFuertes.get(Tipo.FUEGO).add(Tipo.PLANTA);
+                 tablaFuertes.get(Tipo.HADA).add(Tipo.DRAGON);
+                 tablaFuertes.get(Tipo.HADA).add(Tipo.LUCHA);
+                 tablaFuertes.get(Tipo.HADA).add(Tipo.SINIESTRO);
+                 tablaFuertes.get(Tipo.HIELO).add(Tipo.DRAGON);
+                 tablaFuertes.get(Tipo.HIELO).add(Tipo.PLANTA);
+                 tablaFuertes.get(Tipo.HIELO).add(Tipo.TIERRA);
+                 tablaFuertes.get(Tipo.HIELO).add(Tipo.VOLADOR);
+                 tablaFuertes.get(Tipo.LUCHA).add(Tipo.ACERO);
+                 tablaFuertes.get(Tipo.LUCHA).add(Tipo.HIELO);
+                 tablaFuertes.get(Tipo.LUCHA).add(Tipo.NORMAL);
+                 tablaFuertes.get(Tipo.LUCHA).add(Tipo.ROCA);
+                 tablaFuertes.get(Tipo.LUCHA).add(Tipo.SINIESTRO);
+                 tablaFuertes.get(Tipo.PLANTA).add(Tipo.AGUA);
+                 tablaFuertes.get(Tipo.PLANTA).add(Tipo.ROCA);
+                 tablaFuertes.get(Tipo.PLANTA).add(Tipo.TIERRA);
+                 tablaFuertes.get(Tipo.PSIQUICO).add(Tipo.LUCHA);
+                 tablaFuertes.get(Tipo.PSIQUICO).add(Tipo.VENENO);
+                 tablaFuertes.get(Tipo.ROCA).add(Tipo.BICHO);
+                 tablaFuertes.get(Tipo.ROCA).add(Tipo.FUEGO);
+                 tablaFuertes.get(Tipo.ROCA).add(Tipo.HIELO);
+                 tablaFuertes.get(Tipo.ROCA).add(Tipo.VOLADOR);
+                 tablaFuertes.get(Tipo.SINIESTRO).add(Tipo.FANTASMA);
+                 tablaFuertes.get(Tipo.SINIESTRO).add(Tipo.PSIQUICO);
+                 tablaFuertes.get(Tipo.TIERRA).add(Tipo.ACERO);
+                 tablaFuertes.get(Tipo.TIERRA).add(Tipo.ELECTRICO);
+                 tablaFuertes.get(Tipo.TIERRA).add(Tipo.FUEGO);
+                 tablaFuertes.get(Tipo.TIERRA).add(Tipo.ROCA);
+                 tablaFuertes.get(Tipo.TIERRA).add(Tipo.VENENO);
+                 tablaFuertes.get(Tipo.VENENO).add(Tipo.HADA);
+                 tablaFuertes.get(Tipo.VENENO).add(Tipo.PLANTA);
+                 tablaFuertes.get(Tipo.VOLADOR).add(Tipo.BICHO);
+                 tablaFuertes.get(Tipo.VOLADOR).add(Tipo.LUCHA);
+                 tablaFuertes.get(Tipo.VOLADOR).add(Tipo.PLANTA);
+
+
+             }
 
 
     }

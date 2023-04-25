@@ -39,7 +39,7 @@ public class Main {
             }
         }
     }
-    private int x;
+
     public static void mostrarPokemon(Connection con) throws SQLException {
         String pok="Charizard";
         //String consulta = "SELECT * FROM POKEDEX";
