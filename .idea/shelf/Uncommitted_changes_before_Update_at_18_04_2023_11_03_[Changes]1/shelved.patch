@@ -1,0 +1,37 @@
+Index: src/main/java/org/example/Main.java
+===================================================================
+diff --git a/src/main/java/org/example/Main.java b/src/main/java/org/example/Main.java
+deleted file mode 100644
+--- a/src/main/java/org/example/Main.java	
++++ /dev/null	
+@@ -1,7 +0,0 @@
+-package org.example;
+-
+-public class Main {
+-    public static void main(String[] args) {
+-        System.out.println("Hello world!");
+-    }
+-}
+\ No newline at end of file
+Index: src/main/java/modelo/logger.java
+===================================================================
+diff --git a/src/main/java/modelo/logger.java b/src/main/java/modelo/logger.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/modelo/logger.java	
+@@ -0,0 +1,4 @@
++package modelo;
++
++public class logger {
++}
+Index: src/main/java/modelo/Movimiento.java
+===================================================================
+diff --git a/src/main/java/modelo/Movimiento.java b/src/main/java/modelo/Movimiento.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/modelo/Movimiento.java	
+@@ -0,0 +1,4 @@
++package modelo;
++
++public class Movimiento {
++}
