@@ -1,4 +1,4 @@
 package clases;
 
-public enum Estado { DORMIDO, DESPIERTO
+public enum Estado { DORMIDO, DESPIERTO,NORMAL
 }
