@@ -70,8 +70,11 @@ public class Pokemon {
             tablaTipos.put(Tipo.LUCHA, new LinkedList<>());
             tablaTipos.put(Tipo.NORMAL, new LinkedList<>());
             tablaTipos.put(Tipo.PLANTA, new LinkedList<>());
-
-
+            tablaTipos.put(Tipo.PSIQUICO, new LinkedList<>());
+            tablaTipos.put(Tipo.ROCA, new LinkedList<>());
+            tablaTipos.put(Tipo.SINIESTRO, new LinkedList<>());
+            tablaTipos.put(Tipo.TIERRA, new LinkedList<>());
+            tablaTipos.put(Tipo.VENENO, new LinkedList<>());
         }
 
 
